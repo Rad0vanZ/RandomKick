@@ -20,8 +20,25 @@ export default function Home() {
   }
 
   return (
-    <>
+    <>  
       <h1 style={{ fontSize: 32, marginBottom: 20 }}>🎲 Random Kick Stream</h1>
+
+      <a
+        href="/donate"
+        style={{
+          display: "inline-block",
+          padding: "10px 16px",
+          background: "#111",
+          border: "1px solid #39ff14",
+          color: "#39ff14",
+          borderRadius: 8,
+          fontWeight: "bold",
+          marginBottom: 20,
+          textDecoration: "none"
+        }}
+      >
+        💚 Donate
+      </a>
 
       <label>
         <input
@@ -81,7 +98,7 @@ export default function Home() {
             ▶ Open Stream
           </a>
         </div>
-      )}
+      )}  
     </>
   );
 }
