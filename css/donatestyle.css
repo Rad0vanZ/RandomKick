@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+  background: #111;
+  color: #eee;
+  padding: 20px;
+  position: relative;
+}
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 5px;
+}
+.wallet-box {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #1a1a1a;
+}
+.wallet-box img {
+  width: 200px;
+  margin-top: 10px;
+}
+.back-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  background: #39ff14;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid #39ff14;
+}
+.back-btn:hover {
+  background: #32cc0f;
+  border-color: #32cc0f;
+}
