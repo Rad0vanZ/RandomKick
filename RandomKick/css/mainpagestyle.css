@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.donate-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #111;
+  border: 1px solid #39ff14;
+  color: #39ff14;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+select, button {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 8px;
+}
+
+button {
+  background: #39ff14;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.stream-box {
+  margin-top: 30px;
+  padding: 15px;
+  background: #111;
+  border: 1px solid #39ff14;
+  border-radius: 8px;
+  display: none;
+}
+
+.stream-link {
+  color: #39ff14;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#loadingText {
+  display: none;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #39ff14;
+}
+	
+#streamBox {
+  display: none;
+  margin-top: 20px;
+}
