@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Live Streams</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="browse-container">
+        <!-- Navigation -->
+        <div class="browse-header">
+            <a href="index.html" class="logo-small">KICK<span class="random">ROULETTE</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">🎲 Random</a>
+                <a href="donate.html" class="nav-link">❤️ Donate</a>
+            </div>
+        </div>
+
+        <h1 class="browse-title">Live Now</h1>
+        <p id="status-text" class="browse-subtitle">Fetching streams...</p>
+
+        <!-- The Grid -->
+        <div id="streamGrid" class="stream-grid">
+            <!-- Stream cards will be injected here by JS -->
+        </div>
+    </div>
+
+    <script src="browse-script.js"></script>
+</body>
+</html>
