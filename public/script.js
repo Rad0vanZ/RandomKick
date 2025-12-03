@@ -4,6 +4,7 @@ document.getElementById('kickButton').addEventListener('click', async () => {
     const errorP = document.getElementById('error');
     const link = document.getElementById('streamLink');
     const name = document.getElementById('streamerName');
+    const viewers = document.getElementById('viewerCount');
 
     // UI State: Loading
     button.disabled = true;
@@ -21,11 +22,18 @@ document.getElementById('kickButton').addEventListener('click', async () => {
         // Update UI with result
         name.innerText = data.streamer;
         link.href = data.url;
+        
+        if (data.viewer_count && data.viewer_count !== "Unknown (API Blocked)") {
+            viewers.innerText = `👁️ ${data.viewer_count} Viewers`;
+        } else {
+            viewers.innerText = "🔴 Live";
+        }
+
         resultDiv.classList.remove('hidden');
 
     } catch (err) {
         console.error(err);
-        errorP.innerText = "Oops! Could not find a stream. Try again.";
+        errorP.innerText = "Connection failed. Please try again.";
         errorP.classList.remove('hidden');
     } finally {
         // UI State: Ready
