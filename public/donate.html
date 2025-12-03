@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Support the Dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container donate-container">
+        <a href="index.html" class="back-link">← Back to Generator</a>
+        
+        <h1 class="logo">SUPPORT <span class="random">ME</span></h1>
+        <p class="subtitle">Your donations keep this tool running!</p>
+
+        <div class="crypto-grid">
+            
+            <!-- Bitcoin -->
+            <div class="crypto-card">
+                <h3>Bitcoin (BTC)</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1q5lkwelezltdmvle34re46n874vfcte3w7clalt" alt="BTC QR">
+                <div class="address-box">
+                    <input type="text" value="bc1q5lkwelezltdmvle34re46n874vfcte3w7clalt" readonly>
+                    <button onclick="copyToClipboard(this)">Copy</button>
+                </div>
+            </div>
+
+            <!-- Ethereum -->
+            <div class="crypto-card">
+                <h3>Ethereum (ETH)</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x3d7c59724FDEEA2bBDfCF0acc50a0E925F0Bf960" alt="ETH QR">
+                <div class="address-box">
+                    <input type="text" value="0x3d7c59724FDEEA2bBDfCF0acc50a0E925F0Bf960" readonly>
+                    <button onclick="copyToClipboard(this)">Copy</button>
+                </div>
+            </div>
+
+            <!-- Litecoin -->
+            <div class="crypto-card">
+                <h3>Litecoin (LTC)</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=LgGNginoxMjQYrUet9gm1rPhq2oBweqgxk" alt="LTC QR">
+                <div class="address-box">
+                    <input type="text" value="LgGNginoxMjQYrUet9gm1rPhq2oBweqgxk" readonly>
+                    <button onclick="copyToClipboard(this)">Copy</button>
+                </div>
+            </div>
+
+            <!-- Solana -->
+            <div class="crypto-card">
+                <h3>Solana (SOL)</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=3wmnsafFbxpdru8kZ3ivTp3XWkWJSGAsW2h7UroTQgFX" alt="SOL QR">
+                <div class="address-box">
+                    <input type="text" value="3wmnsafFbxpdru8kZ3ivTp3XWkWJSGAsW2h7UroTQgFX" readonly>
+                    <button onclick="copyToClipboard(this)">Copy</button>
+                </div>
+            </div>
+
+            <!-- Cardano -->
+            <div class="crypto-card">
+                <h3>Cardano (ADA)</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=addr1qx95yjajsu4293zzu8qsnlgggffpdajkq4mdpysmk5l6mkutgf9m9pe25tzy9cwpp87sssjjzmm9vptk6zfphdfl4hdsa8rrks" alt="ADA QR">
+                <div class="address-box">
+                    <input type="text" value="addr1qx95yjajsu4293zzu8qsnlgggffpdajkq4mdpysmk5l6mkutgf9m9pe25tzy9cwpp87sssjjzmm9vptk6zfphdfl4hdsa8rrks" readonly>
+                    <button onclick="copyToClipboard(this)">Copy</button>
+                </div>
+            </div>
+
+            <!-- USDT (TRX) -->
+            <div class="crypto-card">
+                <h3>USDT (TRX/TRC20)</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=TKLWkmyiKzyUDipZb7FYjhsfkKfiCoYk77" alt="USDT TRX QR">
+                <div class="address-box">
+                    <input type="text" value="TKLWkmyiKzyUDipZb7FYjhsfkKfiCoYk77" readonly>
+                    <button onclick="copyToClipboard(this)">Copy</button>
+                </div>
+            </div>
+
+            <!-- USDT (ETH) -->
+            <div class="crypto-card">
+                <h3>USDT (ERC20)</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x3d7c59724FDEEA2bBDfCF0acc50a0E925F0Bf960" alt="USDT ETH QR">
+                <div class="address-box">
+                    <input type="text" value="0x3d7c59724FDEEA2bBDfCF0acc50a0E925F0Bf960" readonly>
+                    <button onclick="copyToClipboard(this)">Copy</button>
+                </div>
+            </div>
+
+            <!-- BNB -->
+            <div class="crypto-card">
+                <h3>BNB (BSC)</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x3d7c59724FDEEA2bBDfCF0acc50a0E925F0Bf960" alt="BNB QR">
+                <div class="address-box">
+                    <input type="text" value="0x3d7c59724FDEEA2bBDfCF0acc50a0E925F0Bf960" readonly>
+                    <button onclick="copyToClipboard(this)">Copy</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(btn) {
+            const input = btn.previousElementSibling;
+            input.select();
+            document.execCommand('copy');
+            
+            const originalText = btn.innerText;
+            btn.innerText = "Copied!";
+            btn.style.backgroundColor = "#53fc18";
+            btn.style.color = "black";
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.backgroundColor = "#2f333a";
+                btn.style.color = "white";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
